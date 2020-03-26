@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 if (process.env.NODE_ENV != 'production') { const dotenv = require('dotenv/config') };
-//const routes = require('./src/routes');
+const routes = require('./routes');
 const path = require('path');
 
 console.log(process.env.NODE_ENV);
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //use the routes
-//app.use(routes);
+app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
