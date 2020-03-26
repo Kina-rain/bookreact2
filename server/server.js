@@ -18,7 +18,7 @@ app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
 
-    let staticPath = path.join(__dirname, '../client/public');
+    let staticPath = path.join(__dirname, '../client/build');
     // Serve any static files
     app.use(express.static(staticPath));
 
