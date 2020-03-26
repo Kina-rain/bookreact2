@@ -6,7 +6,7 @@ const apiRoutes = require('./API');
 router.use('/api', apiRoutes);
 
 //setup the path to the react world
-let staticPath = path.join(__dirname, '../../client/public');
+let staticPath = path.join(__dirname, '../../client/build');
 
 console.log(staticPath);
 
